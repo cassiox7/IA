@@ -9,3 +9,29 @@
   Year                     = {2012}
 }
 
+@Article{jantzen1998tutorial,
+  Title                    = {Tutorial on fuzzy logic},
+  Author                   = {Jantzen, Jan},
+  Journal                  = {Technical University of Denmark, Dept. of Automation, Technical Report},
+  Year                     = {1998}
+}
+
+@Article{mendel1995fuzzy,
+  Title                    = {Fuzzy logic systems for engineering: a tutorial},
+  Author                   = {Mendel, Jerry M},
+  Journal                  = {Proceedings of the IEEE},
+  Year                     = {1995},
+  Number                   = {3},
+  Pages                    = {345--377},
+  Volume                   = {83},
+
+  Publisher                = {Ieee}
+}
+
+@Book{siler2005fuzzy,
+  Title                    = {Fuzzy expert systems and fuzzy reasoning},
+  Author                   = {Siler, William and Buckley, James J},
+  Publisher                = {John Wiley \& Sons},
+  Year                     = {2005}
+}
+
