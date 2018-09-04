@@ -1,0 +1,99 @@
+[System]
+Name='Umidade'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=40
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='TPLAN-RAIZ'
+Range=[0 180]
+NumMFs=3
+MF1='RAIZ-CURTA':'trapmf',[-64 -7.2 30 60]
+MF2='RAIZ-MEDIA':'trapmf',[40 50 80 100]
+MF3='RAIZ-LONGA':'trapmf',[73 97 180 200]
+
+[Input2]
+Name='ESTAG-C'
+Range=[0.25 1.15]
+NumMFs=5
+MF1='MBAIXO':'trapmf',[0.245 0.269052419354839 0.331 0.453]
+MF2='BAIXO':'trapmf',[0.4 0.453 0.497 0.6]
+MF3='QMEDIO':'trapmf',[0.556 0.637 0.690020161290323 0.754]
+MF4='MEDIO':'trapmf',[0.7 0.788004032258065 0.85 0.92]
+MF5='ALTO':'trapmf',[0.87 1 1.12 1.15]
+
+[Input3]
+Name='TEMP'
+Range=[24 45]
+NumMFs=2
+MF1='MQUENTE':'trapmf',[28 35 46 46]
+MF2='QUENTE':'trapmf',[24 28 30 33]
+
+[Input4]
+Name='TPLAN-DH'
+Range=[0.1 0.6]
+NumMFs=4
+MF1='MBAIXO':'trapmf',[-0.05 0.08333 0.15 0.2]
+MF2='BAIXO':'trapmf',[0.173 0.233 0.273891129032258 0.322]
+MF3='MEDIO':'trapmf',[0.283 0.365 0.425100806451613 0.477]
+MF4='ALTO':'trapmf',[0.45 0.5 0.6167 0.75]
+
+[Output1]
+Name='UMD'
+Range=[0 40]
+NumMFs=6
+MF1='UMD-MBAIXA':'trimf',[5 8 10]
+MF2='UMD-BAIXA':'trimf',[8 12 13]
+MF3='UMD-QMEDIA':'trimf',[12.3 16 20]
+MF4='UMD-MEDIA':'trimf',[18 22 25]
+MF5='UMD-ALTA':'trimf',[24 28 31]
+MF6='UMD-MALTA':'trimf',[28 33 38]
+
+[Rules]
+1 1 2 1, 2 (1) : 1
+1 1 2 2, 2 (1) : 1
+1 1 2 3, 1 (1) : 1
+1 1 2 4, 1 (1) : 1
+1 1 1 1, 2 (1) : 1
+1 1 1 2, 2 (1) : 1
+1 1 1 3, 1 (1) : 1
+1 1 1 4, 1 (1) : 1
+1 2 2 1, 2 (1) : 1
+1 2 2 2, 2 (1) : 1
+1 2 2 3, 1 (1) : 1
+1 2 2 4, 1 (1) : 1
+1 2 1 1, 2 (1) : 1
+1 2 1 2, 2 (1) : 1
+1 2 1 3, 1 (1) : 1
+1 2 1 4, 1 (1) : 1
+2 3 2 1, 3 (1) : 1
+2 3 2 2, 3 (1) : 1
+2 3 2 3, 2 (1) : 1
+2 3 2 4, 2 (1) : 1
+2 3 1 1, 3 (1) : 1
+2 3 1 2, 3 (1) : 1
+2 3 1 3, 2 (1) : 1
+2 3 1 4, 2 (1) : 1
+2 4 2 1, 4 (1) : 1
+2 4 2 2, 4 (1) : 1
+2 4 2 3, 3 (1) : 1
+2 4 2 4, 3 (1) : 1
+2 4 1 1, 5 (1) : 1
+2 4 1 2, 5 (1) : 1
+2 4 1 3, 4 (1) : 1
+2 4 1 4, 4 (1) : 1
+3 5 2 1, 5 (1) : 1
+3 5 2 2, 5 (1) : 1
+3 5 2 3, 4 (1) : 1
+3 5 2 4, 4 (1) : 1
+3 5 1 1, 6 (1) : 1
+3 5 1 2, 6 (1) : 1
+3 5 1 3, 5 (1) : 1
+3 5 1 4, 5 (1) : 1
